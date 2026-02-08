@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Orders Request Schema",
+  "type": "object",
+  "properties": {
+  "id": {
+  "type": "string"
+  },
+  "customerId": {
+  "type": "string"
+  },
+  "items": {
+  "type": "array",
+  "items": {
+  "type": "object",
+  "properties": {
+  "itemId": {
+  "type": "string"
+  },
+  "name": {
+  "type": "string"
+  },
+  "price": {
+  "type": "number"
+  },
+  "quantity": {
+  "type": "number"
+  }
+  },
+  "required": ["itemId", "name", "price", "quantity"]
+  }
+  },
+  "total": {
+  "type": "number"
+  },
+  "status": {
+  "type": "string"
+  },
+  "createdAt": {
+  "type": "number"
+  },
+  "paid": {
+  "type": "boolean"
+  }
+  },
+  "required": ["id", "customerId", "items", "total", "status", "createdAt", "paid"]
+}
