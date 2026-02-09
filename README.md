@@ -82,7 +82,7 @@ ProjectApi/
 │   │   │   └── UserDataGenerator.java
 │   │   └── listeners/               # TestNG Listeners
 │   │       ├── TestListener.java    # Test Execution Listener
-│   │       └── RetryAnalyzer.java   # Retry Failed Tests
+│   │       
 │   └── resources/
 │       ├── Data/
 │       │   └── users.json           # Test User Credentials
@@ -395,11 +395,12 @@ Reusable API methods:
 ```java
 public class ItemsEndpoint {
     public Response createitems(CreateItemPojo item) {
+        private static final String ITEMS_ENDPOINT = "/items";
         return given()
                 .spec(BaseApis.getRequestSpecification())
                 .body(item)
                 .when()
-                .post("/items");
+                .post(ITEMS_ENDPOINT);
     }
 }
 ```
