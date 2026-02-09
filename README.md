@@ -88,9 +88,6 @@ ProjectApi/
 │       │   └── users.json           # Test User Credentials
 │       ├── config.properties        # Environment Configuration
 │       └── testng.xml              # TestNG Suite Configuration
-├── target/
-│   ├── allure-results/             # Raw Allure Test Results
-│   └── surefire-reports/           # TestNG Reports
 ├── pom.xml                         # Maven Dependencies
 └── README.md                       # Project Documentation
 ```
