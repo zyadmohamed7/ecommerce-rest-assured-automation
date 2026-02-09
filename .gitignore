@@ -5,6 +5,12 @@ target/
 .kotlin
 
 ### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/vcs.xml
+.idea/misc.xml
+.idea/material_theme_project_new.xml.xml
+.idea/encodings.xml.xml
+.idea/dictionaries
 .idea/
 *.iws
 *.iml
