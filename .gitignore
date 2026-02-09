@@ -11,7 +11,7 @@ target/
 .idea/material_theme_project_new.xml.xml
 .idea/encodings.xml.xml
 .idea/dictionaries
-/.idea/
+.idea/
 *.iws
 *.iml
 *.ipr
