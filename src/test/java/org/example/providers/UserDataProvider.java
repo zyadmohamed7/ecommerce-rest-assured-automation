@@ -26,10 +26,6 @@ public class UserDataProvider {
 }
 
 
-
-
-
-
     /*
     @DataProvider(name = "regularUsers")
     public static Object[][] getRegularUsers() throws IOException {

@@ -70,6 +70,7 @@ public class PositiveFlowTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test creating a new item as Admin user")
     public void testCreateitems() throws InterruptedException {
+
         ItemsEndpoint itemsEndpointCreate = new ItemsEndpoint(adminTokenData.getToken());
         CreateItemPojo newItem = ItemDataGenerator.generateRandomItem();
         try {
@@ -80,7 +81,7 @@ public class PositiveFlowTest {
                     .body(matchesJsonSchemaInClasspath("itemsSchema.json"))
                     .extract()
                     .as(ItemIdPojo.class);
-                     Thread.sleep(2000);
+            Thread.sleep(2000);
             createdId = responsePost.getId();
             System.out.println("Created item ID: " + createdId);
         } catch (Exception e) {
@@ -88,6 +89,8 @@ public class PositiveFlowTest {
             createdId = BACKUP_ITEM_ID;
         }
     }
+
+
 
     @Test(priority = 2, dependsOnMethods = "testCreateitems")
     @Story("Item Management")
@@ -289,5 +292,6 @@ public class PositiveFlowTest {
         }
     }
 }
+
 
  */
