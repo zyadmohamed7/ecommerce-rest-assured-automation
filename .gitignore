@@ -37,3 +37,4 @@ build/
 
 
 src/test/java/org/example/testcases/PositiveFlowTest.java
+src/test/java/org/example/testcases/NegativeFlowTest.java

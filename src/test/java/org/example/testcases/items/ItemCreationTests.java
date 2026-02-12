@@ -20,7 +20,7 @@ public class ItemCreationTests extends BaseTest {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Test creating a new item as Admin user")
     public void shouldCreateItemSuccessfully_WhenAdminCreatesWithValidData() throws InterruptedException {
-        // Arrange
+
         ItemsEndpoint itemsEndpoint = new ItemsEndpoint(SharedTestData.getAdminToken());
         CreateItemPojo newItem = ItemDataGenerator.generateRandomItem();
 
