@@ -1,6 +1,7 @@
 package org.example.apis;
 
 import io.restassured.response.Response;
+import org.example.apis.config.RequestSpecFactory;
 import org.example.pojos.CreateItemPojo;
 
 import static io.restassured.RestAssured.given;
@@ -16,8 +17,7 @@ public class ItemsEndpoint {
 
     public Response createitems(CreateItemPojo payload) {
         return given()
-                .spec(BaseApis.getRequestSpecification())
-                .header("Authorization", "Bearer " + token)
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .body(payload)
                 .when()
                 .post(ITEMS_ENDPOINT);
@@ -25,26 +25,23 @@ public class ItemsEndpoint {
 
     public Response getitems(String id) {
         return given()
-                .spec(BaseApis.getRequestSpecification())
-                .header("Authorization", "Bearer " + token)
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .when()
-                .get(ITEMS_ENDPOINT +"/" + id);
+                .get(ITEMS_ENDPOINT + "/" + id);
     }
 
     public Response updateitems(String id, CreateItemPojo payload) {
         return given()
-                .spec(BaseApis.getRequestSpecification())
-                .header("Authorization", "Bearer " + token)
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .body(payload)
                 .when()
-                .put(ITEMS_ENDPOINT +"/" + id);
+                .put(ITEMS_ENDPOINT + "/" + id);
     }
 
     public Response deleteitems(String id) {
         return given()
-                .spec(BaseApis.getRequestSpecification())
-                .header("Authorization", "Bearer " + token)
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .when()
-                .delete(ITEMS_ENDPOINT +"/" + id);
+                .delete(ITEMS_ENDPOINT + "/" + id);
     }
 }

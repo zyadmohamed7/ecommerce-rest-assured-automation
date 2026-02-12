@@ -23,8 +23,7 @@ public class OrderRetrievalTests extends BaseTest {
 
         response.then()
                 .assertThat()
-                .statusCode(200)
-                .log().all();
+                .statusCode(200);
 
         System.out.println("✅ Retrieved all orders");
     }

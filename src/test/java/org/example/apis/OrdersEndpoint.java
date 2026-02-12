@@ -1,7 +1,7 @@
 package org.example.apis;
 
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.example.apis.config.RequestSpecFactory;
 import org.example.pojos.CreateOrderPojo;
 
 import static io.restassured.RestAssured.given;
@@ -16,46 +16,38 @@ public class OrdersEndpoint {
     }
 
     public Response createOrder(CreateOrderPojo payload) {
-        return given().spec(BaseApis.getRequestSpecification())
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token)
+        return given()
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .body(payload)
                 .when()
                 .post(ORDERS_ENDPOINT);
     }
 
     public Response getOrder() {
-        return given().spec(BaseApis.getRequestSpecification())
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token)
+        return given()
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .when()
                 .get(ORDERS_ENDPOINT);
     }
 
-
     public Response getCheckout(String id) {
-        return given().spec(BaseApis.getRequestSpecification())
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token)
+        return given()
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .when()
                 .post(ORDERS_ENDPOINT + "/" + id + "/checkout");
     }
 
     public Response getPaidItems() {
-        return given().spec(BaseApis.getRequestSpecification())
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token)
+        return given()
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .when()
                 .get(ORDERS_ENDPOINT + "/paid");
     }
 
     public Response deleteorder(String id) {
-        return given().spec(BaseApis.getRequestSpecification())
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer " + token)
+        return given()
+                .spec(RequestSpecFactory.getAuthSpec(token))
                 .when()
                 .delete(ORDERS_ENDPOINT + "/" + id);
     }
-
-
 }

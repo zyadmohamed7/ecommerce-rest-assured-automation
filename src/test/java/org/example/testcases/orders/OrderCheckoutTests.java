@@ -24,8 +24,7 @@ public class OrderCheckoutTests extends BaseTest {
 
         checkoutResponse.then()
                 .assertThat()
-                .statusCode(200)
-                .log().all();
+                .statusCode(200);
 
         System.out.println("✅ Checked out order: " + orderId);
     }
@@ -42,8 +41,7 @@ public class OrderCheckoutTests extends BaseTest {
 
         checkoutResponse.then()
                 .assertThat()
-                .statusCode(200)
-                .log().all();
+                .statusCode(200);
 
         System.out.println("✅ Retrieved all paid orders");
     }
