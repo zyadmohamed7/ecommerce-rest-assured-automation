@@ -1,0 +1,29 @@
+<div>POST to http://localhost:3000/items</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;name&quot;: &quot;r3akzouvsm199i1djqhxspqkimyfm7755gv11ob9hhfxqlw55c1z6cntgrnfw0vq1f6xdf6t9akxyct7ok77lwg1bothojf0vuqycq6wkx72mtyhi0105rhm06aa1apjrfb55aw4aucwampypfvsxs5nlo4u4zzzpep11pkv7vnnpofbke3wpbulzv2xx7a4p25wzcurgl1ycz4au4jj3n2yu60qjelbbza78vhqj2huinb9himrg5m77art6wqijm4h4ivjldbmsglq4nhdva5182agbxb7a6gsukuz3j4rtqb7ub7sdo9reulhexx12s1pqfqon3u9uhq7hvshpk8lezsweggk4jr3dm90mt3oadxboysooubjqw0zbqjd1reoj4p5hu3zm1nd31r55qy9fyc3yikqbhrxj24d6l5r1f3e23a7iocgqkoj3u5h30px6xwbnv834x2foo8u7om2tqtt1wfca18d3nhzm7v8f0wrr9ao&quot;,
+    &quot;price&quot;: 550.24,
+    &quot;stock&quot;: 81
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDkxOTk5MiwiZXhwIjoxNzcwOTIzNTkyfQ.VEObgBEj7j1Z77o23msq8jMHWxiCBC2Vjj8L2SETld8</div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;http://localhost:3000/items&#39; -H &#39;Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFkbWluIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MDkxOTk5MiwiZXhwIjoxNzcwOTIzNTkyfQ.VEObgBEj7j1Z77o23msq8jMHWxiCBC2Vjj8L2SETld8&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;name&quot;: &quot;r3akzouvsm199i1djqhxspqkimyfm7755gv11ob9hhfxqlw55c1z6cntgrnfw0vq1f6xdf6t9akxyct7ok77lwg1bothojf0vuqycq6wkx72mtyhi0105rhm06aa1apjrfb55aw4aucwampypfvsxs5nlo4u4zzzpep11pkv7vnnpofbke3wpbulzv2xx7a4p25wzcurgl1ycz4au4jj3n2yu60qjelbbza78vhqj2huinb9himrg5m77art6wqijm4h4ivjldbmsglq4nhdva5182agbxb7a6gsukuz3j4rtqb7ub7sdo9reulhexx12s1pqfqon3u9uhq7hvshpk8lezsweggk4jr3dm90mt3oadxboysooubjqw0zbqjd1reoj4p5hu3zm1nd31r55qy9fyc3yikqbhrxj24d6l5r1f3e23a7iocgqkoj3u5h30px6xwbnv834x2foo8u7om2tqtt1wfca18d3nhzm7v8f0wrr9ao&quot;,
+    &quot;price&quot;: 550.24,
+    &quot;stock&quot;: 81
+}&#39;
+</div>
