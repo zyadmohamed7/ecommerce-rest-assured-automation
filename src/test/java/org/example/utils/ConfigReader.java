@@ -8,13 +8,6 @@ public class ConfigReader {
 
     private static Properties properties = new Properties();
 
-    /*
-       This is a static initializer block - a special block of code that runs ONCE when the class is first loaded into memory
-       It runs:
-                -The very first time someone uses the ConfigReader class
-                -Before any methods are called
-                -Only runs ONCE, never again
-     */
     static {
         try {
             InputStream input = ConfigReader.class.getClassLoader()
