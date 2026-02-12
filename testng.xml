@@ -1,16 +1,36 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="API Automation Test Suite" verbose="1">
 
+    <!-- Listeners -->
     <listeners>
         <listener class-name="org.example.listeners.RetryListener"/>
-
         <listener class-name="org.example.listeners.TestListener"/>
     </listeners>
 
-    <test name="E-Commerce API Tests">
-        <packages>
-            <package name="org.example.testcases"/>
-        </packages>
+    <!-- Test 1: Item Management Flow -->
+    <test name="Item Management Tests" preserve-order="true">
+        <classes>
+            <class name="org.example.testcases.items.ItemCreationTests"/>
+            <class name="org.example.testcases.items.ItemRetrievalTests"/>
+            <class name="org.example.testcases.items.ItemUpdateTests"/>
+        </classes>
+    </test>
+
+    <!-- Test 2: Order Management Flow -->
+    <test name="Order Management Tests" preserve-order="true">
+        <classes>
+            <class name="org.example.testcases.orders.OrderCreationTests"/>
+            <class name="org.example.testcases.orders.OrderRetrievalTests"/>
+            <class name="org.example.testcases.orders.OrderCheckoutTests"/>
+            <class name="org.example.testcases.orders.OrderDeletionTests"/>
+        </classes>
+    </test>
+
+    <!-- Test 3: Cleanup -->
+    <test name="Cleanup Tests" preserve-order="true">
+        <classes>
+            <class name="org.example.testcases.items.ItemDeletionTests"/>
+        </classes>
     </test>
 
 </suite>
