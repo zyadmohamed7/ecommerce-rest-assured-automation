@@ -1,12 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="API Automation Test Suite" verbose="1">
 
-    <!-- Listeners -->
-    <listeners>
-        <listener class-name="org.example.listeners.RetryListener"/>
-        <listener class-name="org.example.listeners.TestListener"/>
-    </listeners>
-
     <!-- Test 1: Item Management Flow -->
     <test name="Item Management Tests" preserve-order="true">
         <classes>

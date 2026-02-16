@@ -38,3 +38,6 @@ build/
 
 src/test/java/org/example/testcases/PositiveFlowTest.java
 src/test/java/org/example/testcases/NegativeFlowTest.java
+/.allure/allure-2.20.1
+/.allure
+/allure-results
