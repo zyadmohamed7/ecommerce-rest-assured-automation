@@ -1,8 +1,0 @@
-[DEBUG] - [17-02-2026 21:58:41] [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\NoahRuess\Desktop\ITI\API\RestAssure\ecommerce-rest-assured-automation\testng.xml"
-[INFO] - [17-02-2026 21:58:41] [main] [org.testng.internal.Utils] - [TestNG] Running:
-  C:\Users\NoahRuess\Desktop\ITI\API\RestAssure\ecommerce-rest-assured-automation\testng.xml
-
-[DEBUG] - [17-02-2026 21:59:28] [main] [org.testng.TestNG] - suiteXmlPath: "C:\Users\NoahRuess\Desktop\ITI\API\RestAssure\ecommerce-rest-assured-automation\testng.xml"
-[INFO] - [17-02-2026 21:59:28] [main] [org.testng.internal.Utils] - [TestNG] Running:
-  C:\Users\NoahRuess\Desktop\ITI\API\RestAssure\ecommerce-rest-assured-automation\testng.xml
-
