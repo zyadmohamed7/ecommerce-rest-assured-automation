@@ -9,7 +9,7 @@ import org.example.testcases.BaseTest;
 import org.example.utils.SharedTestData;
 import org.testng.annotations.Test;
 
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 
 @Epic("E-Commerce API Testing")
 @Feature("Item Management")
