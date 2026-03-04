@@ -7,7 +7,6 @@ import org.example.pojos.CreateItemPojo;
 import org.example.pojos.ItemIdPojo;
 import org.example.testcases.BaseTest;
 import org.example.utils.SharedTestData;
-import org.testng.annotations.Test;
 
 
 

@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.*;
 
 public class BaseTest {
 
-    @Step("Global Setup: Login and generate tokens for Admin and Customer users")
+
     public void globalSetup() throws IOException {
         System.out.println("\n╔══════════════════════════════════════════════════╗");
         System.out.println("║   🚀 GLOBAL SETUP - PERFORMING LOGIN            ║");
