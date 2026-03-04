@@ -17,7 +17,6 @@ import static org.hamcrest.Matchers.*;
 
 public class BaseTest {
 
-    @BeforeSuite(alwaysRun = true)
     @Step("Global Setup: Login and generate tokens for Admin and Customer users")
     public void globalSetup() throws IOException {
         System.out.println("\n╔══════════════════════════════════════════════════╗");
